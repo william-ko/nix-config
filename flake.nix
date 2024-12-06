@@ -63,8 +63,6 @@
             pkgs.nerdfonts
           ];
 
-          environment.systemPackages = [ pkgs.nixfmt-rfc-style ];
-
           system.activationScripts.applications.text =
             let
               env = pkgs.buildEnv {
