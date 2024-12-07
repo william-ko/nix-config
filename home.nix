@@ -19,6 +19,8 @@
     pkgs.git
     pkgs.gh
     pkgs.delta
+    pkgs.ripgrep
+    pkgs.lazygit
   ];
 
   # This value determines the Home Manager release that your
@@ -90,9 +92,9 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
   programs.direnv.enable = true;
   programs.direnv.enableZshIntegration = true;
+  programs.lazygit.enable = true;
 
   programs.zsh = {
     enable = true;
