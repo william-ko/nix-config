@@ -21,6 +21,7 @@
     pkgs.delta
     pkgs.ripgrep
     pkgs.lazygit
+    pkgs.google-cloud-sdk
   ];
 
   # This value determines the Home Manager release that your
@@ -50,6 +51,7 @@
 
         [core]
           pager = delta
+          editor = vim
 
         [interactive]
           diffFilter = delta --color-only
