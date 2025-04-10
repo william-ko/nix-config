@@ -22,6 +22,7 @@
     pkgs.ripgrep
     pkgs.lazygit
     pkgs.google-cloud-sdk
+    pkgs.postgresql_16
   ];
 
   # This value determines the Home Manager release that your
