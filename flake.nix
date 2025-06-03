@@ -48,11 +48,10 @@
             enable = true;
             casks = [
               "slack"
-              "arc"
+              "firefox"
               "microsoft-teams"
               "inkdrop"
               "superhuman"
-              "docker"
             ];
             onActivation.cleanup = "zap";
             onActivation.autoUpdate = true;
@@ -89,7 +88,7 @@
             NSGlobalDomain.AppleICUForce24HourTime = true;
             dock.persistent-apps = [
               "/Applications/Superhuman.app"
-              "/Applications/Arc.app"
+              "/Applications/Firefox.app"
               "/${pkgs.iterm2}/Applications/iTerm2.app"
               "/Applications/Slack.app"
               "/Applications/Microsoft Teams.app"
