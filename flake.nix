@@ -49,7 +49,6 @@
             casks = [
               "slack"
               "firefox"
-              "microsoft-teams"
               "inkdrop"
               "superhuman"
             ];
@@ -91,7 +90,6 @@
               "/Applications/Firefox.app"
               "/${pkgs.iterm2}/Applications/iTerm2.app"
               "/Applications/Slack.app"
-              "/Applications/Microsoft Teams.app"
               "/Applications/Inkdrop.app"
             ];
           };
