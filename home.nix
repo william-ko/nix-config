@@ -23,6 +23,7 @@
     pkgs.lazygit
     pkgs.google-cloud-sdk
     pkgs.postgresql_16
+    pkgs.nodejs_22
   ];
 
   # This value determines the Home Manager release that your
