@@ -116,7 +116,6 @@
       cdapi = "cd ~/Development/vetspire/api";
       cdweb = "cd ~/Development/vetspire/web";
       z = "zellij";
-      claude = "claude-code";
     };
     syntaxHighlighting.enable = true;
     enableCompletion = true;
