@@ -43,6 +43,7 @@
       configuration =
         { pkgs, config, ... }:
         {
+          system.primaryUser = "billkontos";
 
           homebrew = {
             enable = true;
@@ -58,7 +59,7 @@
           };
 
           fonts.packages = [
-            pkgs.nerdfonts
+            pkgs.nerd-fonts._0xproto
           ];
 
           system.activationScripts.applications.text =
@@ -75,7 +76,7 @@
               rm -rf /Applications/Nix\ Apps
               mkdir -p /Applications/Nix\ Apps
               find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
-              while read src; do
+              while read -r src; do
                 app_name=$(basename "$src")
                 echo "copying $src" >&2
                 ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
@@ -94,13 +95,8 @@
             ];
           };
 
-          # Auto upgrade nix package and the daemon service.
-          services.nix-daemon.enable = true;
-          # nix.package = pkgs.nix;
-
           users.users.billkontos.home = "/Users/billkontos";
           home-manager.backupFileExtension = "backup";
-          nix.configureBuildUsers = true;
 
           # Necessary for using flakes on this system.
           nix.settings.experimental-features = "nix-command flakes";
@@ -118,6 +114,8 @@
 
           # The platform the configuration will be used on.
           nixpkgs.hostPlatform = "aarch64-darwin";
+
+          nixpkgs.config.allowUnfree = true;
         };
     in
     {
@@ -146,9 +144,9 @@
 
               # Optional: Declarative tap management
               taps = {
-                "homebrew/homebrew-core" = homebrew-core;
-                "homebrew/homebrew-cask" = homebrew-cask;
-                "homebrew/homebrew-bundle" = homebrew-bundle;
+                "homebrew/core" = homebrew-core;
+                "homebrew/cask" = homebrew-cask;
+                "homebrew/bundle" = homebrew-bundle;
               };
 
               # Optional: Enable fully-declarative tap management

@@ -23,7 +23,7 @@
     pkgs.lazygit
     pkgs.google-cloud-sdk
     pkgs.postgresql_16
-    pkgs.nodejs_22
+    pkgs.claude-code
   ];
 
   # This value determines the Home Manager release that your
@@ -116,6 +116,7 @@
       cdapi = "cd ~/Development/vetspire/api";
       cdweb = "cd ~/Development/vetspire/web";
       z = "zellij";
+      claude = "claude-code";
     };
     syntaxHighlighting.enable = true;
     enableCompletion = true;
