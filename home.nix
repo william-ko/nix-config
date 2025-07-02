@@ -24,6 +24,10 @@
     pkgs.google-cloud-sdk
     pkgs.postgresql_16
     pkgs.claude-code
+    pkgs.fzf
+    pkgs.luarocks
+    pkgs.fd
+    pkgs.imagemagick
   ];
 
   # This value determines the Home Manager release that your
