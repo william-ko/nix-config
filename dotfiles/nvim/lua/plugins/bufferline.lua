@@ -18,10 +18,10 @@ return {
     opts = {
       options = {
         close_command = function(n)
-          LazyVim.ui.bufremove(n)
+          Snacks.bufdelete(n)
         end,
         right_mouse_command = function(n)
-          LazyVim.ui.bufremove(n)
+          Snacks.bufdelete(n)
         end,
         diagnostics = "nvim_lsp",
         always_show_bufferline = false,
