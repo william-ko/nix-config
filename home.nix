@@ -21,7 +21,9 @@
     pkgs.delta
     pkgs.ripgrep
     pkgs.lazygit
-    pkgs.google-cloud-sdk
+    (pkgs.google-cloud-sdk.withExtraComponents [
+      pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin
+    ])
     pkgs.postgresql_16
     pkgs.claude-code
     pkgs.fzf
