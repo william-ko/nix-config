@@ -51,7 +51,6 @@
               "slack"
               "firefox"
               "inkdrop"
-              "superhuman"
             ];
             onActivation.cleanup = "zap";
             onActivation.autoUpdate = true;
@@ -67,7 +66,7 @@
               env = pkgs.buildEnv {
                 name = "system-applications";
                 paths = config.environment.systemPackages;
-                pathsToLink = "/Applications";
+                pathsToLink = [ "/Applications" ];
               };
             in
             pkgs.lib.mkForce ''
@@ -87,7 +86,7 @@
             dock.autohide = true;
             NSGlobalDomain.AppleICUForce24HourTime = true;
             dock.persistent-apps = [
-              "/Applications/Superhuman.app"
+              "/System/Applications/Mail.app"
               "/Applications/Firefox.app"
               "/${pkgs.iterm2}/Applications/iTerm2.app"
               "/Applications/Slack.app"

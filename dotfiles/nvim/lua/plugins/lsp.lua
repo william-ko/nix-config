@@ -175,6 +175,10 @@ return {
         -- tsserver = {},
         --
 
+        lexical = {
+          filetypes = { "elixir", "eelixir", "heex" },
+        },
+
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
